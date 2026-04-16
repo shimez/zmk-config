@@ -21,11 +21,5 @@
 include:
   - board: sparkfun_pro_micro_rp2040
     shield: lily58_left
-    name: lily58_left_central_ascii
-    extra_configs:
-      - CONFIG_ZMK_SPLIT_ROLE_CENTRAL=n     # 左側をperipheralに指定
   - board: sparkfun_pro_micro_rp2040
     shield: lily58_right
-    name: lily58_right_peripheral_ascii
-    extra_configs:
-      - CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y     # 右側をcentralに指定
