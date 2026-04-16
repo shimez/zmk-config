@@ -23,3 +23,16 @@ include:
     shield: lily58_left
   - board: sparkfun_pro_micro_rp2040
     shield: lily58_right
+
+  # reset firmware
+  # 左側をcentralにしたresetファーム
+  - board: sparkfun_pro_micro_rp2040
+    shield: lily58_left
+    extra_configs:
+      - CONFIG_ZMK_SETTINGS_RESET=y
+
+  # 右側をperipheralにしたresetファーム
+  - board: sparkfun_pro_micro_rp2040
+    shield: lily58_right
+    extra_configs:
+      - CONFIG_ZMK_SETTINGS_RESET=y
