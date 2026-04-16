@@ -19,22 +19,24 @@
 #
 ---
 include:
+  # ================== Project 1: 左をcentralにしたASCII版 ==================
   - board: sparkfun_pro_micro_rp2040
     shield: lily58_left
+    name: lily58_left_central_ascii
+
   - board: sparkfun_pro_micro_rp2040
     shield: lily58_right
+    name: lily58_right_peripheral_ascii
 
-  # reset firmware
-  # 左側 resetファームウェア
+  # ================== Project 2: 右をcentralにしたJIS調整版（将来用） ==================
+  - board: sparkfun_pro_micro_rp2040
+    shield: lily58_right
+    name: lily58_right_central_jis
+    extra_configs:
+      - CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y     # 右側をcentralに指定
+
   - board: sparkfun_pro_micro_rp2040
     shield: lily58_left
-    name: lily58_left_settings_reset
+    name: lily58_left_peripheral_jis
     extra_configs:
-      - CONFIG_ZMK_SETTINGS_RESET=y
-
-  # 右側 resetファームウェア
-  - board: sparkfun_pro_micro_rp2040
-    shield: lily58_right
-    name: lily58_right_settings_reset
-    extra_configs:
-      - CONFIG_ZMK_SETTINGS_RESET=y
+      - CONFIG_ZMK_SPLIT_ROLE_CENTRAL=n     # 左側をperipheralに指定
