@@ -1,0 +1,6 @@
+/ {
+    wired_split {
+        compatible = "zmk,wired-split";
+        device = <&uart0>;   // SparkFun Pro Micro RP2040の標準UART0（要確認）
+    };
+};
